@@ -1,1 +1,153 @@
-<h1> My Portfolio </h1>
+<!doctype html>
+<html lang="en">
+    <link href="./css/homePage.css" rel="stylesheet">
+    <head>
+        <meta charset="UTF-8">
+        <title>Home</title>
+        
+        <!-- 
+            3. Create the external JavaScript file (.js) 
+            to validate the form created in step 1, 
+            should include the following 
+        -->
+        <script src="./javascript/myScript.js"></script>
+    </head>
+
+    <body>
+        <h1>Form with JavaScript Validation</h1>
+        <p> 
+            I tryed to follow best practices, so I toggle the visibility of the asterisks as to not shift
+            the page around when a field was missed. Aswel as marking the mising fields both with and asterisk
+            and set asterisk will be displayed in red. I've also been very busy with senior design one, so I've
+            kept this asignment fairly simple, I tried to clearly label things to make grading easy.
+        </p>
+        <div>
+            <h3 id="missingMessage">Required fields are missing (marked in red and with '*')</h3>
+        </div>
+
+        <form name = "form" onsubmit = "return(validate());">
+            <!-- a. First name -->
+            <div class="aFirstName">
+                <span><a id="aFirstNameRequire">*</a> a. First name: <input type = "text" name = "aFirstName" /></span>
+            </div>
+            <br>
+
+            <!-- b. Last name -->
+            <div class="bLastName">
+                <span><a id="bLastNameRequire">*</a> b. Last name: <input type = "text" name = "bLastName" /></span>
+            </div>
+            <br>
+
+            <!-- c. Address -->
+            <div class="cAddress">
+                <span><a id="cAddressRequire">*</a> c. Address: <input type = "text" name = "cAddress" /></span>
+            </div>
+            <br>
+
+            <!-- d. Address -->
+            <div class="dCity">
+                <span><a id="dCityRequire">*</a> d. City: <input type = "text" name = "dCity" /></span>
+            </div>
+            <br>
+
+            <!-- e. State -->
+            <div class="eState">
+                <a><a id="eStateRequire">*</a> e. State, as a 'select': </a>
+                <br>
+                <select name = "eState">
+                    <option value = "default" selected>State</option>
+                    <option value="AL">Alabama</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="AR">Arkansas</option>
+                    <option value="CA">California</option>
+                    <option value="CO">Colorado</option>
+                    <option value="CT">Connecticut</option>
+                    <option value="DE">Delaware</option>
+                    <option value="DC">District Of Columbia</option>
+                    <option value="FL">Florida</option>
+                    <option value="GA">Georgia</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="ID">Idaho</option>
+                    <option value="IL">Illinois</option>
+                    <option value="IN">Indiana</option>
+                    <option value="IA">Iowa</option>
+                    <option value="KS">Kansas</option>
+                    <option value="KY">Kentucky</option>
+                    <option value="LA">Louisiana</option>
+                    <option value="ME">Maine</option>
+                    <option value="MD">Maryland</option>
+                    <option value="MA">Massachusetts</option>
+                    <option value="MI">Michigan</option>
+                    <option value="MN">Minnesota</option>
+                    <option value="MS">Mississippi</option>
+                    <option value="MO">Missouri</option>
+                    <option value="MT">Montana</option>
+                    <option value="NE">Nebraska</option>
+                    <option value="NV">Nevada</option>
+                    <option value="NH">New Hampshire</option>
+                    <option value="NJ">New Jersey</option>
+                    <option value="NM">New Mexico</option>
+                    <option value="NY">New York</option>
+                    <option value="NC">North Carolina</option>
+                    <option value="ND">North Dakota</option>
+                    <option value="OH">Ohio</option>
+                    <option value="OK">Oklahoma</option>
+                    <option value="OR">Oregon</option>
+                    <option value="PA">Pennsylvania</option>
+                    <option value="RI">Rhode Island</option>
+                    <option value="SC">South Carolina</option>
+                    <option value="SD">South Dakota</option>
+                    <option value="TN">Tennessee</option>
+                    <option value="TX">Texas</option>
+                    <option value="UT">Utah</option>
+                    <option value="VT">Vermont</option>
+                    <option value="VA">Virginia</option>
+                    <option value="WA">Washington</option>
+                    <option value="WV">West Virginia</option>
+                    <option value="WI">Wisconsin</option>
+                    <option value="WY">Wyoming</option>
+                </select>
+            </div>
+            <br>
+
+            <!-- f. Zip code-->
+            <div class="fZipCode">
+                <span><a id="fZipCodeRequire">*</a> f. Zip Code: <input type = "text" name = "fZipCode" /></span>
+            </div>
+            <br>
+
+            <!-- g. Phone Number-->
+            <div class="gPhoneNumber">
+                <span><a id="gPhoneNumberRequire">*</a> g. Phone Number: <input type = "text" name = "gPhoneNumber" /></span>
+            </div>
+            <br>
+
+            <!-- g.1 Personal-->
+            <div class="gPersonal">
+                <span><a id="gPersonalRequire">*</a>Personal <input type = "radio" name = "numberType" id = "gPersonal">
+            </div>
+            <br>
+
+            <!-- g.1 Business-->
+            <div class="gBusiness">
+                <span><a id="gBusinessRequire">*</a>Business <input type = "radio" name = "numberType" id = "gBusiness"></span>
+            </div>
+            <br>
+
+            <!-- h. Email Address -->
+            <div class="hEmailAddress">
+                <span><a id="hEmailAddressRequire">*</a> h. Email Address: <input type = "text" name = "hEmailAddress" /></span>
+            </div>
+            <br>
+
+            <!-- i. Submit Button -->
+            <div>
+                i. Submit Button: <input type = "submit" value = "Submit"/>
+            </div>
+        </form> 
+
+    </body>  
+</html>
+
+
